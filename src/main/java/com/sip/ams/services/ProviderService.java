@@ -38,5 +38,22 @@ public class ProviderService {
 	{
 		return providerRepository.findAll();
 	}
+	
+	public void deleteProvider(Long id)
+	{
+		 providerRepository.deleteById(id);
+		 System.out.println("Provider num : "+id+" is deleted");
+     }
+	
+	public Provider updateProvider(Long id, Provider newProvider)
+	{
+		 //providerRepository.deleteById(id);
+		
+		//Provider oldProvider = providerRepository.getById(id);
+		
+		newProvider.setId(id);
+		return providerRepository.save(newProvider);
+		
+     }
 
 }
