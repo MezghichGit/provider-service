@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import com.sip.ams.entities.Provider;
@@ -15,7 +16,7 @@ import com.sip.ams.services.ProviderService;
 import java.util.*;
 @SpringBootApplication
 @EnableDiscoveryClient
-public class MiProviderServiceApplication implements CommandLineRunner{
+public class MiProviderServiceApplication extends SpringBootServletInitializer implements CommandLineRunner{
 
 	public static void main(String[] args) {
 		SpringApplication.run(MiProviderServiceApplication.class, args);
